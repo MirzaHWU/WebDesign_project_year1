@@ -1,11 +1,13 @@
 
 const body = $("body");
 const mainQuote = $(".main-quote");
-const navBar =  $(".header");
+const navBar = $(".header");
 const searchIcon = $(".searchBox img");
 const modeSwitchIcon = $(".icon-mode-switch img");
 const extraText = $(".extra-text");
 const extraTextCircles = $(".extra-text .circle");
+const headerBlurDark = $(".header-blur-dark");
+const headerBlurLight = $(".header-blur-light");
 
 var inputIsHidden = true;
 
@@ -36,6 +38,8 @@ modeSwitchIcon.click(function () {
         mainQuote.animate({ 'color': "#FFAF8A;" }, 600);
         extraText.animate({ 'color': "#FFAF8A" }, 600);
         extraTextCircles.animate({ 'background-color': "#FFAF8A" }, 600);
+        headerBlurDark.animate({ 'opacity': "1" }, 600);
+        headerBlurLight.animate({ 'opacity': "0" }, 600);
 
         navBar.animate({ 'color': "#E3E3E3" }, 600);
 
@@ -46,10 +50,10 @@ modeSwitchIcon.click(function () {
             searchIcon.animate({ 'opacity': "1" }, 1);
             modeSwitchIcon.animate({ 'opacity': "1" }, 1);
 
-            searchIcon.attr("src","./assets/search-white.png");
-            modeSwitchIcon.attr("src","./assets/sun.svg");
+            searchIcon.attr("src", "./assets/search-white.png");
+            modeSwitchIcon.attr("src", "./assets/sun.svg");
         }, 300);
-        
+
         console.log("dark");
         isDarkMode = !isDarkMode;
     } else {
@@ -57,6 +61,8 @@ modeSwitchIcon.click(function () {
         mainQuote.animate({ 'color': "#FF6119" }, 600);
         extraText.animate({ 'color': "#FF6119" }, 600);
         extraTextCircles.animate({ 'background-color': "#FF6119" }, 600);
+        headerBlurDark.animate({ 'opacity': "0" }, 600);
+        headerBlurLight.animate({ 'opacity': "1" }, 600);
 
         navBar.animate({ 'color': "#121212" }, 600);
 
@@ -67,10 +73,10 @@ modeSwitchIcon.click(function () {
             searchIcon.animate({ 'opacity': "1" }, 1);
             modeSwitchIcon.animate({ 'opacity': "1" }, 1);
 
-            searchIcon.attr("src","./assets/search-black.svg");
-            modeSwitchIcon.attr("src","./assets/sleep.png");
+            searchIcon.attr("src", "./assets/search-black.svg");
+            modeSwitchIcon.attr("src", "./assets/sleep.png");
         }, 300);
-        
+
 
         console.log("light");
         isDarkMode = !isDarkMode;
@@ -95,3 +101,82 @@ let backgroundAnim = new ScrollMagic.Scene({
     .setTween(mainImageAnim)
     .addTo(controller);
 
+
+
+
+
+
+let userStartScrolling = true;
+
+$(window).scroll(function () {
+
+    if (userStartScrolling) {
+        navBar.animate({ 'opacity': "0" }, 300);
+        userStartScrolling = false;
+    }
+
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function () {
+        navBar.animate({ 'opacity': "1" }, 300);
+        userStartScrolling = true;
+    }, 500));
+});
+
+
+let bestSellImgArray = [];
+let currentImageIndex = 0;
+
+//Retrive from database----------------------------------------
+var storage = firebase.storage();
+var storageRef = storage.ref();
+var carsFolderref = storageRef.child("bestSellingCars");
+
+for (let index = 0; index < 4; index++) {
+    var imageRef = carsFolderref.child("car" + index + ".jpg");
+
+    imageRef.getDownloadURL().then(function (url) {
+        bestSellImgArray.push(url);
+
+    }).catch(function (error) {
+        console.log(error);
+    });
+}
+
+console.log(bestSellImgArray);
+//-----------------------------------------------------------
+
+const leftArrow = $(".best-sell-img .learn-more-button .arrow-left img");
+const rightArrow = $(".best-sell-img .learn-more-button .arrow-right img");
+const bestSellImg = $("#best-sell-img");
+
+leftArrow.click(() => {
+    bestSellImg.animate({ opacity: 0 }, 600);
+    setTimeout(() => {
+        bestSellImg.attr("src", bestSellImgArray[currentImageIndex]);
+    }, 600);
+    bestSellImg.animate({ opacity: 1 }, 600);
+    currentImageIndex++;
+    if (currentImageIndex >= bestSellImgArray.length) {
+        currentImageIndex = 0;
+    }
+
+});
+
+rightArrow.click(() => {
+    bestSellImg.animate({ opacity: 0 }, 600);
+    setTimeout(() => {
+        bestSellImg.attr("src", bestSellImgArray[currentImageIndex]);
+    }, 600);
+    bestSellImg.animate({ opacity: 1 }, 600);
+    currentImageIndex--;
+    if (currentImageIndex <= 0) {
+        currentImageIndex = bestSellImgArray.length - 1;
+    }
+
+});
+
+function preloadImage(url) {
+    var img = new Image();
+    img.src = url;
+    return img;
+}

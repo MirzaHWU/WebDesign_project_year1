@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #121212;
     margin: 0;
@@ -30,12 +34,16 @@ body {
 } 
 
 nav {
+    position: relative;
     padding-left: 4vw;
     padding-right: 4vw;
+
+    
 
     grid-area: nav;
    
 }
+
 
 
 /* ------------------------------------ */
@@ -121,19 +129,123 @@ nav {
 
 /* ------------------------------------ */
 
+.best-sell-img img {
+   
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: scale(0.9);
+    border-radius: 25px;
+    -webkit-box-shadow: 2px 2px 23px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 23px -4px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 23px -4px rgba(0,0,0,0.75);
+
+}
 .best-sell-img {
-    background-color: lavender;
+    position: relative;
     grid-area: best-sell-img;
 }
 
+.best-sell-img .learn-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+
+    left: 50%;
+    margin-left: -190px;
+    top: 95%;
+    margin-top: -20px;
+
+    cursor: pointer;
+}
+
+.best-sell-img .learn-more-button button{
+    height: 40px;
+    width: 300px;
+
+    background-color: #FFAF8A;
+    border-radius: 20px;
+    border-style: none;
+
+    -webkit-box-shadow: 2px 2px 23px -4px rgba(255,175,138,0.3);
+    -moz-box-shadow: 2px 2px 23px -4px rgba(255,175,138,0.3);
+    box-shadow: 2px 2px 23px -4px rgba(255,175,138,0.3);
+
+    
+}
+
+.best-sell-img .learn-more-button button a {
+    text-decoration: none;
+    color: #121212;
+    font-size: 20px;
+
+    text-align: center;
+
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.65);
+}
+
+.best-sell-img .learn-more-button .arrow-left {
+    transform: rotate(180deg);
+
+}
+
+
+.best-sell-img .learn-more-button .arrow-right img, .best-sell-img .learn-more-button .arrow-left img{
+    height: 40px;
+    width: 40px;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+    box-shadow: none;
+}
+
+
 /* ------------------------------------ */
 .best-seller {
-    background-color: lightgreen;
+    padding-right: 4vw;
+    padding-top: 10%;
+    text-align: left;
+
+    font-family: 'Open Sans', sans-serif;
+    color: #FFAF8A;
+
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.65);
+
     grid-area: best-sell;
+    cursor: default;
 }
+
+.best-seller .bold {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.best-seller .sub-text {
+    font-size: 40px;
+    font-weight: 300;
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.best-seller .info {
+    text-justify: auto;
+    padding-top: 3%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
 /* ------------------------------------ */
 footer {
-    background-color: lightseagreen;
+    
     grid-area: foot;
 }
 /* ------------------------------------ */
@@ -144,6 +256,8 @@ footer {
 
 
 .header {
+    position: fixed;
+    z-index: 100;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -153,10 +267,15 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     
-    /* padding: 30px 3%; */
 }
 
+
+
+.header nav{
+    padding-left: 42vw;
+}
 
 .pageName {
     font-family: 'Open Sans', sans-serif;
@@ -166,9 +285,11 @@ footer {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+    
 }
 
 .navLinks {
+    
     list-style: none;
     
 
@@ -234,49 +355,6 @@ footer {
 
 
 
-
-   
-
-
-
-
-::-webkit-input-placeholder  {
-    color: rgba(71, 71, 71, 0.897);;
-}
-
-::-moz-placeholder {
-    color: rgba(71, 71, 71, 0.897);;
-}
-
-:-ms-input-placeholder {
-    color: rgba(71, 71, 71, 0.897);;
-}
-
-
-.quote {
-    
-    color: white;
-
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    
-    
-}
-
-.quote h1{
-   font-size: 100px;
-  
-}
-
-.quote h2{
-    color: rgb(83, 83, 83);
-    font-size: 70px;
-    padding-left: 70%;
- }
-
-
-
 ::-webkit-scrollbar {
     width: 7px;
   
@@ -314,19 +392,19 @@ footer {
 }
 
 .white-space4 {
-    background-color: pink;
+    
 
     grid-area: space4;
 }
 
 .white-space5 {
-    background-color: pink;
+    
 
     grid-area: space5;
 }
 
 .white-space6 {
-    background-color: pink;
+    
 
     grid-area: space6;
 }
@@ -347,4 +425,24 @@ footer {
     border-radius: 10px;
     background: rgb(48, 48, 48);
     
+}
+
+.header-blur-dark {
+    top: 0;
+    position: fixed;
+    height: 170px;
+    width: 100%;
+
+    background: linear-gradient(0deg, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 45%);
+    z-index: 3;
+}
+
+.header-blur-light {
+    top: 0;
+    position: fixed;
+    height: 170px;
+    width: 100%;
+    opacity: 0%;
+    background: linear-gradient(0deg, rgba(227,227,227,0) 0%, rgba(227,227,227,1) 45%);
+    z-index: 3;
 }

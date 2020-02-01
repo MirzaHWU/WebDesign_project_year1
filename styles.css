@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow: visible;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
     margin: 0;
     height: 100vh;
 
-    overflow-x: hidden;
+ 
 }
 
 .grid-container {
@@ -28,7 +29,7 @@ body {
     
     ;
 
-    height: 220vh;
+    height: 320vh;
     margin: 1em;
     
 } 
@@ -55,9 +56,9 @@ nav {
     line-height: 500%;
 
     font-family: 'Open Sans', sans-serif;
-    color: #FFAF8A;
+    color: rgb(252, 133, 78);
 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.65);
+    text-shadow: 0px 0px 10px rgba(255, 112, 69,0.4);
 
     grid-area: quote;
     cursor: default;
@@ -99,8 +100,8 @@ nav {
 
 .extra-text {
     font-family: 'Open Sans', sans-serif;
-    color:  #FFAF8A;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.65);
+    color: rgb(252, 133, 78);    
+    text-shadow: 0px 0px 10px rgba(255, 112, 69,0.5);
 
     font-size: 20px;
     font-weight: 300;
@@ -119,8 +120,7 @@ nav {
 .extra-text .circle {
     width: 15px;
     height: 15px;
-    background-color: #FFAF8A;
-    border-radius: 50%;
+    background-color:rgb(252, 133, 78);    border-radius: 50%;
 
     -webkit-box-shadow: 2px 2px 23px -4px rgba(255,175,138,1);
     -moz-box-shadow: 2px 2px 23px -4px rgba(255,175,138,1);
@@ -169,8 +169,7 @@ nav {
     height: 40px;
     width: 300px;
 
-    background-color: #FFAF8A;
-    border-radius: 20px;
+    background-color:rgb(252, 133, 78);    border-radius: 20px;
     border-style: none;
 
     -webkit-box-shadow: 2px 2px 23px -4px rgba(255,175,138,0.3);
@@ -213,9 +212,8 @@ nav {
     text-align: left;
 
     font-family: 'Open Sans', sans-serif;
-    color: #FFAF8A;
-
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.65);
+    color:rgb(252, 133, 78);
+    text-shadow: 0px 0px 10px rgba(255, 112, 69,0.4);
 
     grid-area: best-sell;
     cursor: default;
@@ -308,8 +306,7 @@ footer {
 .navLinks li a:hover {
     font-size: 30px;
 
-   color: #FFAF8A;
-    
+   color:rgb(252, 133, 78);    
 }
 
 

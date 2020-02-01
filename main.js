@@ -8,6 +8,8 @@ const extraText = $(".extra-text");
 const extraTextCircles = $(".extra-text .circle");
 const headerBlurDark = $(".header-blur-dark");
 const headerBlurLight = $(".header-blur-light");
+const toChangeColor = $(".toChangeColor");
+const learnMoreButton = $(".learn-more-button button");
 
 var inputIsHidden = true;
 
@@ -35,9 +37,11 @@ var isDarkMode = true;
 modeSwitchIcon.click(function () {
     if (!isDarkMode) {
         body.animate({ 'background-color': "#121212" }, 600);
-        mainQuote.animate({ 'color': "#FFAF8A;" }, 600);
-        extraText.animate({ 'color': "#FFAF8A" }, 600);
-        extraTextCircles.animate({ 'background-color': "#FFAF8A" }, 600);
+        toChangeColor.animate({ 'color': "rgb(252, 133, 78)" }, 600);
+
+        extraTextCircles.animate({ 'background-color': "rgb(252, 133, 78)" }, 600);
+        learnMoreButton.animate({ 'background-color': "rgb(252, 133, 78)" }, 600);
+
         headerBlurDark.animate({ 'opacity': "1" }, 600);
         headerBlurLight.animate({ 'opacity': "0" }, 600);
 
@@ -58,9 +62,11 @@ modeSwitchIcon.click(function () {
         isDarkMode = !isDarkMode;
     } else {
         body.animate({ 'background-color': "#E3E3E3" }, 600);
-        mainQuote.animate({ 'color': "#FF6119" }, 600);
-        extraText.animate({ 'color': "#FF6119" }, 600);
+        
+        toChangeColor.animate({ 'color': "#FF6119" }, 600);
+        learnMoreButton.animate({ 'background-color': "#FF6119" }, 600);
         extraTextCircles.animate({ 'background-color': "#FF6119" }, 600);
+
         headerBlurDark.animate({ 'opacity': "0" }, 600);
         headerBlurLight.animate({ 'opacity': "1" }, 600);
 
@@ -90,6 +96,7 @@ const controller = new ScrollMagic.Controller();
 const mainImage = $(".main-image img");
 
 const mainImageAnim = TweenMax.fromTo(mainImage, 3, { boxShadow: '2px 2px 23px -4px rgba(0,0,0,1)' }, { boxShadow: '2px 2px 23px -4px rgba(0,0,0,0)' });
+const headerBlur = $(".header-blur");
 
 
 let backgroundAnim = new ScrollMagic.Scene({
@@ -112,12 +119,21 @@ $(window).scroll(function () {
 
     if (userStartScrolling) {
         navBar.animate({ 'opacity': "0" }, 300);
+        headerBlurDark.animate({ 'opacity': "0" }, 300);
+        headerBlurLight.animate({ 'opacity': "0" }, 300);
         userStartScrolling = false;
     }
 
     clearTimeout($.data(this, 'scrollTimer'));
     $.data(this, 'scrollTimer', setTimeout(function () {
         navBar.animate({ 'opacity': "1" }, 300);
+        if(isDarkMode) {
+            headerBlurDark.animate({ 'opacity': "1" }, 300);
+        } else {
+            headerBlurLight.animate({ 'opacity': "1" }, 300);
+        }
+        
+        
         userStartScrolling = true;
     }, 500));
 });
@@ -153,7 +169,7 @@ leftArrow.click(() => {
     bestSellImg.animate({ opacity: 0 }, 600);
     setTimeout(() => {
         bestSellImg.attr("src", bestSellImgArray[currentImageIndex]);
-    }, 600);
+    }, 300);
     bestSellImg.animate({ opacity: 1 }, 600);
     currentImageIndex++;
     if (currentImageIndex >= bestSellImgArray.length) {
@@ -166,7 +182,7 @@ rightArrow.click(() => {
     bestSellImg.animate({ opacity: 0 }, 600);
     setTimeout(() => {
         bestSellImg.attr("src", bestSellImgArray[currentImageIndex]);
-    }, 600);
+    }, 300);
     bestSellImg.animate({ opacity: 1 }, 600);
     currentImageIndex--;
     if (currentImageIndex <= 0) {

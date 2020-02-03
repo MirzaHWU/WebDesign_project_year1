@@ -28,13 +28,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
         integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+
 
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
+    
     <div class="header-blur-dark header-blur"></div>
     <div class="header-blur-light header-blur"></div>
     <div class="grid-container">
@@ -44,10 +47,10 @@
                 <div class="pageName"> <a href="./index.html"> Ling's Cars</a></div>
                 <nav>
                     <ul class="navLinks">
-                        <li><a href="#main-img">Home</a></li>
-                        <li><a href="#">Cars</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a id="nav-Home" href="#">Home</a></li>
+                        <li><a id="nav-Cars" href="./carPage/carPagee__index.html">Cars</a></li>
+                        <li><a id="nav-About" href="#">About</a></li>
+                        <li><a id="nav-Contact" href="#">Contact</a></li>
                         <!-- <li><a  class="search" href="#"><img src="./assets/search.png" alt=""></a></li> -->
                         <li class="searchBox">
                             <input type="text" class="input" placeholder="Search">
@@ -88,6 +91,8 @@
         <div class="white-space4"></div>
         <div class="white-space5"></div>
         <div class="white-space6"></div>
+        <div class="white-space7"></div>
+        <div class="white-space8"></div>
 
 
 
@@ -114,7 +119,7 @@
                 <div class="arrow-left" class="arrow">
                     <img src="./assets/next.png" alt="">
                 </div>
-                <button><a href="#"> Learn More</a></button>
+                <button><a href="./carPage/carPagee__index.html"> Learn More</a></button>
                 <div class="arrow-right" class="arrow">
                     <img src="./assets/next.png" alt="">
                 </div>
@@ -137,7 +142,7 @@
                         <div class="car-name"> Car name</div>
                         <div class="price">Price</div>
                     </div>
-                    <div class="info toChangeColor">
+                    <div class="info toChangeColorWhite">
                         Subaru is the automobile manufacturing division of Japanese transportation conglomerate Subaru
                         Corporation, the twenty-second largest automaker by production worldwide in 2012. Subaru cars
                         are known for their use of a boxer engine layout in most vehicles above 1500 cc
@@ -148,12 +153,135 @@
 
         </div>
 
+        <div class="about-container" >
+
+            
+            <div class="map">
+             
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.8468808223065!2d54.35847311545263!3d24.490761666005298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e66645e13cf85%3A0xee322b0dd9085d41!2sAl%20Mutmanni%20St%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1580729187449!5m2!1sen!2sae"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+               
+            </div>
+            <div class="info-container">
+                <div class="bio-container">
+                    <div class="who-are-we toChangeColor">Who are we?</div>
+                    <div class="bio toChangeColorWhite">I am full-time LINGsCARS business owner and I specialise in supplying new UK
+                        Contract Hire, (and sometimes PCP, Lease cars and Lease Hire) cars and vans. LINGsCARS consumes
+                        my life to make it a very successful business. In 2008, I moved over £35,000,000 of brand new
+                        cars!</div>
+                    <div class="who-are-we toChangeColor">Our philosophy</div>
+                    <div class="bio toChangeColorWhite">YOU will benefit from the application of diligence, hard work and thoroughness that
+                        I learnt growing up and at school in China. The workers of the world will unite to achieve
+                        greatness. I aim to do everything right, first time. I punish myself for making mistakes, so
+                        they happen rarely. </div>
+                </div>
+                
+                <div class="address-container">
+                    <div class="find-us toChangeColor">Find Us</div>
+                    <div class="address toChangeColorWhite">
+                        <div style="display: table; height: 100%; overflow: hidden;">
+                            <div style="display: table-cell; vertical-align: middle;">
+                                <div>
+                                    LING World Headquarters
+                                </div>
+                                <div>
+                                    Vance Business Park
+                                </div>
+                                <div>
+                                    Gateshead, NE11 9NE
+                                </div>
+                                <div>
+                                    Newcastle upon Tyne, England, UK
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="find-us toChangeColor">Contact Us</div>
+                    <div class="address toChangeColorWhite">
+                        <div style="display: table; height: 100%; overflow: hidden;">
+                            <div style="display: table-cell; vertical-align: middle;">
+                                <div>
+                                    Ling Valentine
+                                </div>
+                                <div>
+                                    Tel - 0191 460 9444
+                                </div>
+                                <div>
+                                    Fax - 0870 486 1130
+                                </div>
+                                <div>
+                                    Email - sales@LINGsCARS.com
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us-label">About Us</div>
+            <div class="about-container-trigger" id="about-container-trigger"></div>
+        </div>
+
+        <div class="main-contact-form-container">
+            
+            <form class="my-form">
+                <div class="container">
+                  <h1 class="get-in-touch">Get in touch!</h1>
+                  <ul>
+                    <li>
+                      <div class="grid grid-2">
+                        <input type="text" placeholder="Name" required>  
+                        <input type="text" placeholder="Surname" required>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="grid grid-2">
+                        <input type="email" placeholder="Email" required>  
+                        <input type="tel" placeholder="Phone">
+                      </div>
+                    </li>    
+                    <li>
+                      <textarea placeholder="Message"></textarea>
+                    </li>   
+                    <li>
+                      <input type="checkbox" id="terms">
+                      <label class="toChangeColorWhite" for="terms">I have read and agreed with <a href="">the terms and conditions.</a></label>
+                    </li>  
+                    <li>
+                      <div class="grid grid-3">
+                        <div class="required-msg toChangeColorWhite">REQUIRED FIELDS</div>
+                        <button class="btn-grid" type="submit" disabled>
+                          <span class="back">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                          </span>
+                          <span class="front">SUBMIT</span>
+                        </button>
+                        <button class="btn-grid" type="reset" disabled>
+                          <span class="back">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                          </span>
+                          <span class="front">RESET</span>
+                        </button> 
+                      </div>
+                    </li>    
+                  </ul>
+                </div>
+              </form>
+              <div class="form-container-trigger"></div>
+        </div>
         <footer>
             footer
         </footer>
     </div>
-    <script src="./initFirebase.js"></script>
-    <script defer src="main.js"></script>
+    
+
+    <script src="./js/initFirebase.js"></script>
+    <script defer src="./js/headerLinks.js"></script>
+    <script defer src="./js/form.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/animeJS.js"></script>
 </body>
 
 </html>

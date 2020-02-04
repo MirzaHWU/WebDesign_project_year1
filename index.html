@@ -31,29 +31,30 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+
 
 </head>
 
 <body>
-    
+
     <div class="header-blur-dark header-blur"></div>
     <div class="header-blur-light header-blur"></div>
     <div class="grid-container">
         <nav>
+
 
             <div class="header">
                 <div class="pageName"> <a href="./index.html"> Ling's Cars</a></div>
                 <nav>
                     <ul class="navLinks">
                         <li><a id="nav-Home" href="#">Home</a></li>
-                        <li><a id="nav-Cars" href="./carPage/carPagee__index.html">Cars</a></li>
-                        <li><a id="nav-About" href="#">About</a></li>
-                        <li><a id="nav-Contact" href="#">Contact</a></li>
-                        <!-- <li><a  class="search" href="#"><img src="./assets/search.png" alt=""></a></li> -->
+                        <li><a class="cars-link" id="nav-Cars" href="#cars-container-trigger">Cars</a></li>
+                        <li><a id="nav-About" href="#about-container-trigger">About</a></li>
+                        <li><a id="nav-Contact" href="#form-container-trigger">Contact</a></li>
                         <li class="searchBox">
-                            <input type="text" class="input" placeholder="Search">
+
                             <img src="./assets/search-white.png" alt="">
                         </li>
                         <li class="icon-mode-switch">
@@ -126,7 +127,7 @@
             </div>
 
 
-            <img src="./assets/main-image.jpg" alt="Main Car Image" id="best-sell-img">
+            <img src="./assets/bestSellCars/car0.jpg" alt="Main Car Image" id="best-sell-img">
 
 
 
@@ -139,13 +140,20 @@
                         Best Sellers.
                     </div>
                     <div class="sub-text toChangeColor">
-                        <div class="car-name"> Car name</div>
-                        <div class="price">Price</div>
+                        <div class="car-name"> Ford - Mustang</div>
+                        <div class="price">£420/day</div>
                     </div>
                     <div class="info toChangeColorWhite">
-                        Subaru is the automobile manufacturing division of Japanese transportation conglomerate Subaru
-                        Corporation, the twenty-second largest automaker by production worldwide in 2012. Subaru cars
-                        are known for their use of a boxer engine layout in most vehicles above 1500 cc
+                        The Ford Mustang is an American car manufactured by Ford. It was originally conceived by Lee
+                        Iacocca.[2] The Mustang debuted in 1964 with a price of $2,368, with estimated annual sales of
+                        100K. First year sales were over 400K units and one million within two years.[3]
+
+                        The Mustang created the "pony car" class of American cars, distinguished as affordable sporty
+                        coupes with long hoods and short rear decks,[4] and gave rise to competitors such as the
+                        Chevrolet Camaro,[5] Pontiac Firebird, AMC Javelin,[6] Chrysler's revamped Plymouth Barracuda,
+                        and the second generation Dodge Challenger.[7] The Mustang is also credited for inspiring the
+                        designs of coupés such as the Toyota Celica and Ford Capri, which were imported to the United
+                        States.
                     </div>
                 </div>
 
@@ -153,30 +161,76 @@
 
         </div>
 
-        <div class="about-container" >
+        <div class="main-cars-container">
+            <div class="sedans car-category">
+                <div class="cars-container-img-container"><img src="./carSectionImages/sedan.jpg" alt=""></div>
+                <div class="cars-container-text-container">
+                    <div class="car-category-title who-are-we toChangeColor">4-doors</div>
+                    <div class="car-category-disc bio toChangeColorWhite">A 4-door car can have any body shape from a
+                        sedan to a van, or even a pickup truck. These cars usually have two rows of seats and a lot of
+                        room for passengers. Classic 4-door sedans feature trunks located in the rear that provide room
+                        for groceries, camping items, or anything else you want to bring along.</div>
+                </div>
+            </div>
+            <div class="suv car-category">
+                <div class="cars-container-img-container"><img src="./carSectionImages/suv.jpg" alt=""></div>
+                <div class="cars-container-text-container">
+                    <div class="car-category-title  toChangeColor">SUVs</div>
+                    <div class="car-category-disc  toChangeColorWhite">Sport utility vehicle (SUV) is a category of
+                        motor vehicles that combine elements of road-going passenger cars with features from off-road
+                        vehicles, such as raised ground clearance and four-wheel drive. ... More recently, smaller SUVs,
+                        mid-size and crossovers have become increasingly popular.</div>
+                </div>
+            </div>
+            <div class="offroad car-category">
+                <div class="cars-container-img-container"><img src="./carSectionImages/offroad.jpg" alt=""></div>
+                <div class="cars-container-text-container">
+                    <div class="car-category-title  toChangeColor">Off-road</div>
+                    <div class="car-category-disc  toChangeColorWhite">An off-road vehicle is considered to be any type
+                        of vehicle which is capable of driving on and off paved or gravel surface. It is generally
+                        characterized by having large tires with deep, open treads, a flexible suspension, or even
+                        caterpillar tracks. ... Several types of motorsports involve racing off-road vehicles.</div>
+                </div>
+            </div>
+            <div class="premium car-category">
+                <div class="cars-container-img-container"><img src="./carSectionImages/premium.jpg" alt=""></div>
+                <div class="cars-container-text-container">
+                    <div class="car-category-title  toChangeColor">Sport</div>
+                    <div class="car-category-disc  toChangeColorWhite">A sports car is designed to emphasise handling,
+                        performance or thrill of driving. Sports cars originated in Europe in the early 1900s and are
+                        currently produced by many manufacturers around the world.</div>
+                </div>
+            </div>
+            <div class="cars-container-trigger" id="cars-container-trigger"></div>
+        </div>
 
-            
+
+        <div class="about-container">
+
+
             <div class="map">
-             
+
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.8468808223065!2d54.35847311545263!3d24.490761666005298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e66645e13cf85%3A0xee322b0dd9085d41!2sAl%20Mutmanni%20St%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1580729187449!5m2!1sen!2sae"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2291.4570466493005!2d-1.6358923837199282!3d54.94754338034575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e79e2df460117%3A0xe6c3e58fd0c53390!2sVance%20Business%20Park%2C%20Gateshead%20NE11%209NE%2C%20UK!5e0!3m2!1sen!2sae!4v1580838626850!5m2!1sen!2sae"
                     width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-               
+
             </div>
             <div class="info-container">
                 <div class="bio-container">
                     <div class="who-are-we toChangeColor">Who are we?</div>
-                    <div class="bio toChangeColorWhite">I am full-time LINGsCARS business owner and I specialise in supplying new UK
+                    <div class="bio toChangeColorWhite">I am full-time LINGsCARS business owner and I specialise in
+                        supplying new UK
                         Contract Hire, (and sometimes PCP, Lease cars and Lease Hire) cars and vans. LINGsCARS consumes
                         my life to make it a very successful business. In 2008, I moved over £35,000,000 of brand new
                         cars!</div>
                     <div class="who-are-we toChangeColor">Our philosophy</div>
-                    <div class="bio toChangeColorWhite">YOU will benefit from the application of diligence, hard work and thoroughness that
+                    <div class="bio toChangeColorWhite">YOU will benefit from the application of diligence, hard work
+                        and thoroughness that
                         I learnt growing up and at school in China. The workers of the world will unite to achieve
                         greatness. I aim to do everything right, first time. I punish myself for making mistakes, so
                         they happen rarely. </div>
                 </div>
-                
+
                 <div class="address-container">
                     <div class="find-us toChangeColor">Find Us</div>
                     <div class="address toChangeColorWhite">
@@ -220,65 +274,102 @@
                     </div>
                 </div>
             </div>
-            <div class="about-us-label">About Us</div>
+            <div class="about-us-label toChangeColor formFieldsToChangeColor">About Us</div>
             <div class="about-container-trigger" id="about-container-trigger"></div>
         </div>
 
         <div class="main-contact-form-container">
-            
+
             <form class="my-form">
                 <div class="container">
-                  <h1 class="get-in-touch">Get in touch!</h1>
-                  <ul>
-                    <li>
-                      <div class="grid grid-2">
-                        <input type="text" placeholder="Name" required>  
-                        <input type="text" placeholder="Surname" required>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="grid grid-2">
-                        <input type="email" placeholder="Email" required>  
-                        <input type="tel" placeholder="Phone">
-                      </div>
-                    </li>    
-                    <li>
-                      <textarea placeholder="Message"></textarea>
-                    </li>   
-                    <li>
-                      <input type="checkbox" id="terms">
-                      <label class="toChangeColorWhite" for="terms">I have read and agreed with <a href="">the terms and conditions.</a></label>
-                    </li>  
-                    <li>
-                      <div class="grid grid-3">
-                        <div class="required-msg toChangeColorWhite">REQUIRED FIELDS</div>
-                        <button class="btn-grid" type="submit" disabled>
-                          <span class="back">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
-                          </span>
-                          <span class="front">SUBMIT</span>
-                        </button>
-                        <button class="btn-grid" type="reset" disabled>
-                          <span class="back">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
-                          </span>
-                          <span class="front">RESET</span>
-                        </button> 
-                      </div>
-                    </li>    
-                  </ul>
+                    <h1 class="get-in-touch toChangeColor formFieldsToChangeColor">Get in touch!</h1>
+                    <ul>
+                        <li>
+                            <div class="grid grid-2">
+                                <input class="toChangeColorWhite formFieldsToChangeColor" type="text" placeholder="Name"
+                                    required>
+                                <input class="toChangeColorWhite formFieldsToChangeColor" type="text"
+                                    placeholder="Surname" required>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="grid grid-2">
+                                <input class="toChangeColorWhite formFieldsToChangeColor" type="email"
+                                    placeholder="Email" required>
+                                <input class="toChangeColorWhite formFieldsToChangeColor" type="tel"
+                                    placeholder="Phone">
+                            </div>
+                        </li>
+                        <li>
+                            <textarea class="toChangeColorWhite formFieldsToChangeColor"
+                                placeholder="Message"></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="terms">
+                            <label class="toChangeColorWhite" for="terms">I have read and agreed with <a href="">the
+                                    terms and conditions.</a></label>
+                        </li>
+                        <li>
+                            <div class="grid grid-3">
+                                <div class="required-msg toChangeColorWhite">REQUIRED FIELDS</div>
+                                <button class="btn-grid formFieldsToChangeColor" type="submit" disabled>
+                                    <span class="back">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg"
+                                            alt="">
+                                    </span>
+                                    <span class="front toChangeColorWhite">SUBMIT</span>
+                                </button>
+                                <button class="btn-grid formFieldsToChangeColor" type="reset" disabled>
+                                    <span class="back">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg"
+                                            alt="">
+                                    </span>
+                                    <span class="front toChangeColorWhite">RESET</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-              </form>
-              <div class="form-container-trigger"></div>
+            </form>
+            <div class="form-container-trigger" id="form-container-trigger"></div>
         </div>
         <footer>
-            footer
+            <div class="container">
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- footer logo -->
+                        <div class="footer-logo">
+                            <div class="pageName"> <a class=" toChangeColorWhite" href="./index.html"> Ling's Cars</a>
+                            </div>
+                        </div>
+                        <!-- /footer logo -->
+                        <!-- footer follow -->
+                        <ul class="footer-follow">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/lingscars?lang=en"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                        <!-- /footer follow -->
+                        <!-- footer copyright -->
+                        <div class="footer-copyright">
+                            <p>Copyright © 2016-2018. All Rights Reserved.</p>
+                        </div>
+                        <!-- /footer copyright -->
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+            <!-- /Container -->
         </footer>
     </div>
-    
+
 
     <script src="./js/initFirebase.js"></script>
-    <script defer src="./js/headerLinks.js"></script>
+    <!-- <script defer src="./js/headerLinks.js"></script> -->
     <script defer src="./js/form.js"></script>
     <script defer src="./js/main.js"></script>
     <script defer src="./js/animeJS.js"></script>

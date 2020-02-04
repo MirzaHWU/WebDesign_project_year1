@@ -13,6 +13,8 @@ const learnMoreButton = $(".learn-more-button button");
 const aboutContainer = $(".about-container");
 const whitetext = $(".toChangeColorWhite"); 
 const contactFormBackground = $(".main-contact-form-container"); 
+const formFieldsToChangeColor = $(".formFieldsToChangeColor");
+const mainCarsContainer = $(".main-cars-container .car-category"); 
 
 var inputIsHidden = true;
 
@@ -44,6 +46,8 @@ modeSwitchIcon.click(function () {
         toChangeColor.animate({ 'color': "rgb(252, 133, 78)" }, 600);
         whitetext.animate({ 'color': "#E3E3E3" }, 600);
 
+        formFieldsToChangeColor.animate({ 'backgroundColor': "#121212" }, 600);
+
         extraTextCircles.animate({ 'background-color': "rgb(252, 133, 78)" }, 600);
         learnMoreButton.animate({ 'background-color': "rgb(252, 133, 78)" }, 600);
 
@@ -57,6 +61,7 @@ modeSwitchIcon.click(function () {
 
         aboutContainer.animate({ 'background-color': "#191919;" }, 600);
         contactFormBackground.animate({ 'background-color': "#191919;" }, 600);
+        mainCarsContainer.animate({ 'background-color': "#191919;" }, 600);
 
         setTimeout(() => {
             searchIcon.animate({ 'opacity': "1" }, 1);
@@ -74,6 +79,8 @@ modeSwitchIcon.click(function () {
         toChangeColor.animate({ 'color': "#FF6119" }, 600);
         whitetext.animate({ 'color': "#121212" }, 600);
 
+        formFieldsToChangeColor.animate({ 'backgroundColor': "#E3E3E3" }, 600);
+
 
         learnMoreButton.animate({ 'background-color': "#FF6119" }, 600);
         extraTextCircles.animate({ 'background-color': "#FF6119" }, 600);
@@ -88,6 +95,7 @@ modeSwitchIcon.click(function () {
 
         aboutContainer.animate({ 'background-color': "#EFEFEF" }, 600);
         contactFormBackground.animate({ 'background-color': "#EFEFEF;" }, 600);
+        mainCarsContainer.animate({ 'background-color': "#EFEFEF;" }, 600);
 
         setTimeout(() => {
             searchIcon.animate({ 'opacity': "1" }, 1);

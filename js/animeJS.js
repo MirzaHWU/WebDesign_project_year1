@@ -4,11 +4,13 @@
 animationDone = false;
 isAboutCardAnimationDone = false;
 isFoormCardAnimationDone = false;
+isCarsCardAnimationDone = false;
 
 const aboutSectionTrigger = document.querySelector(".about-container-trigger");
 const mainSectionTrigger = document.querySelector(".main-quote");
 const bestSellSectionTrigger = document.querySelector(".best-seller .car-name");
-const formSectionTrigger = document.querySelector(".form-container-trigger");
+const formSectionTrigger = document.querySelector(".form-container-trigger"); 
+const CarsSectionTrigger = document.querySelector(".cars-container-trigger");
 
 animateAboutCardsOut();
 window.addEventListener("scroll", function (event) {
@@ -33,17 +35,37 @@ window.addEventListener("scroll", function (event) {
 
     console.log(scroll)
 
-    if (isInViewport(bestSellSectionTrigger) && !isAboutCardAnimationDone) {
-        animateAboutCardsOut();
+    if (isInViewport(CarsSectionTrigger) && !isCarsCardAnimationDone) {
+        animateBottomCardsOut();
+       animateCarsCardsIn();
+       isCarsCardAnimationDone = true;
+    }
+    else if ( isInViewport(bestSellSectionTrigger) && isCarsCardAnimationDone) {
+        console.log("s")
         animateBottomCardsIn();
+       animateCarsCardsOut();
+       isCarsCardAnimationDone = false;
+    } 
+});
+
+window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+
+    console.log(scroll)
+
+    if (isInViewport(CarsSectionTrigger) && !isAboutCardAnimationDone) {
+        animateAboutCardsOut();
+        animateCarsCardsIn();
         isAboutCardAnimationDone = true;
     }
     else if ( isInViewport(aboutSectionTrigger) && isAboutCardAnimationDone) {
         animateAboutCardsIn();
-        animateBottomCardsOut();
+        animateCarsCardsOut();
         isAboutCardAnimationDone = false;
     } 
 });
+
+
 
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
@@ -156,6 +178,24 @@ function animateFormCardsOut() {
 function animateFormCardsIn() {
     const mainImage = anime({
         targets: '.main-contact-form-container',
+        scale: 1,
+        filter: 'brightness(100%)',
+    });
+
+}
+
+function animateCarsCardsOut() {
+    
+    const mainImage = anime({
+        targets: '.main-cars-container',
+        scale: 0.9,
+        filter: 'brightness(40%)',
+    });
+}
+
+function animateCarsCardsIn() {
+    const mainImage = anime({
+        targets: '.main-cars-container',
         scale: 1,
         filter: 'brightness(100%)',
     });

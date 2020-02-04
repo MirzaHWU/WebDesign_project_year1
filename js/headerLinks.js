@@ -18,3 +18,11 @@ $("#nav-Contact").click(function () {
         scrollLeft: offset.left
     }, 600, "linear");
 });
+
+$("#nav-Cars").click(function () {
+    var offset = $(".main-cars-container").offset();
+    $('html, body').animate({
+        scrollTop: offset.top,
+        scrollLeft: offset.left
+    }, 600, "linear");
+});

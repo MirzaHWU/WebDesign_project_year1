@@ -168,26 +168,8 @@ $(window).scroll(function () {
 
 let bestSellImgArray = [];
 let currentImageIndex = 0;
-let preloadedImages = [];
 
-// //Retrive from database----------------------------------------
-// var storage = firebase.storage();
-// var storageRef = storage.ref();
-// var carsFolderref = storageRef.child("bestSellingCars");
 
-// for (let index = 0; index < 4; index++) {
-//     var imageRef = carsFolderref.child("car" + index + ".jpg");
-
-//     imageRef.getDownloadURL().then(function (url) {
-//         preloadImage(url); 
-
-//     }).catch(function (error) {
-//         console.log(error);
-//     });
-// }
-
-// console.log(bestSellImgArray);
-//-----------------------------------------------------------
 
 const leftArrow = $(".best-sell-img .learn-more-button .arrow-left img");
 const rightArrow = $(".best-sell-img .learn-more-button .arrow-right img");
@@ -225,10 +207,3 @@ rightArrow.click(() => {
     }
 
 });
-
-// function preloadImage(url) {
-//     var img = new Image();
-//     img.src = url;
-//     preloadedImages.push(img);
-//     return img;
-// }

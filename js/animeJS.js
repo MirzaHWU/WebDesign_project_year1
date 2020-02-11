@@ -1,6 +1,3 @@
-
-
-
 animationDone = false;
 isAboutCardAnimationDone = false;
 isFoormCardAnimationDone = false;
@@ -16,7 +13,7 @@ animateAboutCardsOut();
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
 
-    console.log(scroll)
+
 
     if (isInViewport(mainSectionTrigger) && !animationDone) {
         animateTopCardsIn();
@@ -33,7 +30,6 @@ window.addEventListener("scroll", function (event) {
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
 
-    console.log(scroll)
 
     if (isInViewport(CarsSectionTrigger) && !isCarsCardAnimationDone) {
         animateBottomCardsOut();
@@ -51,7 +47,7 @@ window.addEventListener("scroll", function (event) {
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
 
-    console.log(scroll)
+   
 
     if (isInViewport(CarsSectionTrigger) && !isAboutCardAnimationDone) {
         animateAboutCardsOut();
@@ -66,11 +62,10 @@ window.addEventListener("scroll", function (event) {
 });
 
 
-
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
 
-    console.log(scroll)
+   
 
     if (isInViewport(aboutSectionTrigger) && !isFoormCardAnimationDone) {
         animateAboutCardsIn();
@@ -78,7 +73,7 @@ window.addEventListener("scroll", function (event) {
        isFoormCardAnimationDone = true;
     }
     else if ( isInViewport(formSectionTrigger) && isFoormCardAnimationDone) {
-        console.log("s")
+      
         animateAboutCardsOut();
        animateFormCardsIn();
        isFoormCardAnimationDone = false;

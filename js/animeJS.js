@@ -43,7 +43,7 @@ window.addEventListener("scroll", function (event) {
        isCarsCardAnimationDone = false;
     } 
 });
-
+//
 window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
 

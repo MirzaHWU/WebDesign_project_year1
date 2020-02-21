@@ -14,6 +14,58 @@ body {
 }
 
 
+
+  
+@media only screen and (min-width: 0px) {
+  /* For mobile: */
+  .ui_grid_container {
+
+      height: 100vh;
+      width: 100vw;
+  
+      display: grid;
+  
+      grid-template-rows: 10% 50% 5% 25% 10%;
+      grid-template-columns: 5% 90% 5%;
+  
+      grid-template-areas: 
+      "head head head" 
+      "space img space2" 
+      "space space3 space2" 
+      "space cards space2" 
+      "nav nav nav"
+      
+      ;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For mobile: */
+  .ui_grid_container {
+
+      height: 100vh;
+      width: 100vw;
+  
+      display: grid;
+  
+      grid-template-rows: 10% 50% 5% 25% 10%;
+      grid-template-columns: 5% 90% 5%;
+  
+      grid-template-areas: 
+      "head head head" 
+      "space img space2" 
+      "space space3 space2" 
+      "space cards space2" 
+      "nav nav nav"
+      
+      ;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  
+
+
 .grid-container {
     display: grid;
 
@@ -1184,4 +1236,5 @@ footer .footer-copyright p {
   .main-contact-form-container .my-form input[type="checkbox"]:checked + label::after {
     top: 3px;
   }
+}
 }

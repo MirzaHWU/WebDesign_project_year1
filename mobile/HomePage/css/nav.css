@@ -1,0 +1,56 @@
+nav {
+
+    height: 100%;
+
+    
+    padding: 0% 15%;
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    grid-area: nav;
+
+    font-size: 4vw;
+
+   
+    /* -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.44);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.44);
+
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw; */
+
+    background-color: white;
+}
+
+nav .home {
+    filter: invert(66%) sepia(11%) saturate(6747%) hue-rotate(328deg) brightness(105%) contrast(98%);
+    font-size: 7vw;
+    
+}
+
+nav .home,
+nav .search,
+nav .account,
+nav .contact {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav .home  h4,
+nav .search h4,
+nav .account h4,
+nav .contact h4{
+    margin: 0;
+    font-size: 3vw;
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 3%;
+}

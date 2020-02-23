@@ -1,0 +1,25 @@
+
+.extra-txt {
+    font-family: 'Open Sans', sans-serif;
+    grid-area: ext;
+}
+
+.extra-txt  ul {
+    color: #fc854e;
+    list-style: none;
+    padding-left: 1%;
+    
+    height: 70%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.extra-txt li {
+    font-size: 3vw;
+    font-weight: lighter;
+
+    display: inline-block;
+    padding-right: 2%;
+}

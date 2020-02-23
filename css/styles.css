@@ -39,20 +39,11 @@ body {
     ;
 
     height: 405vh;
+    width: 100vw;
     margin: 1em;
     
 } 
 
-nav {
-    position: relative;
-    padding-left: 4vw;
-    padding-right: 4vw;
-
-    
-
-    grid-area: nav;
-   
-}
 
 
 
@@ -647,6 +638,11 @@ footer .footer-copyright p {
     text-decoration: none;
 }
 
+.header nav {
+    position: relative;
+ 
+    padding-right: 4vw;  
+}
 
 .header {
     position: fixed;
@@ -661,19 +657,18 @@ footer .footer-copyright p {
     justify-content: space-between;
     align-items: center;
 
+    width: 100%;
+
+    grid-area: nav;
     
 }
 
 
 
-.header nav{
-    padding-left: 30vw;
-}
-
 .pageName {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 31px;
     letter-spacing: 10px;
     color: inherit;
     text-decoration: none;

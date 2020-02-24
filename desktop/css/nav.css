@@ -1,0 +1,61 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0% 5%;
+
+    grid-area: nav;
+}
+
+
+
+nav .pageName {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    font-style: italic;
+
+    letter-spacing: 10px;
+    color: black;
+
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+nav .head-buttons {
+    
+    font-size: 1.5em;
+
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .head-buttons i{
+    
+    padding-right: 1vw;
+}
+
+nav .head-buttons  h3{
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 0.7em;
+    margin: 0;
+    font-weight: regular;
+    color: #515569;
+
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav .head-buttons  h3:hover{
+    font-size: 1em;
+    color: #fc854e;
+    text-shadow: 0px 0px 10px rgba(255, 112, 69,0.4);
+
+}

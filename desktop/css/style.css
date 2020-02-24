@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+
+
+    overflow-y: hidden;
+
+    background-color: #f3f3f3;
+
+}
+
+
+.ui_grid_container {
+
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+
+    grid-template-rows: 10% 26.666% 26.666% 26.666% 10%;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+
+    grid-template-areas: 
+    "nav nav nav nav nav"  
+    "space3 main main main space2" 
+    "space3 main main main space2" 
+    "space3 main main main space2" 
+    "space4 space4 space4 space4 space4"
+    ;
+}
+  

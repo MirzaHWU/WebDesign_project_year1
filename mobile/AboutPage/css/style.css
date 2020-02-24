@@ -19,14 +19,14 @@ body {
 
     display: grid;
 
-    grid-template-rows: 10% 25% 40% 15% 10%;
+    grid-template-rows: 10% 5% 70% 5% 10%;
     grid-template-columns: 5% 90% 5%;
 
     grid-template-areas: 
     "head head head" 
-    "space3 text space2" 
-    "space3 img space2"
-    "space3 button space2"
+    "space3 space space2" 
+    "space3 map space2" 
+    "space3 space4 space2"
     "nav nav nav"
     ;
 }

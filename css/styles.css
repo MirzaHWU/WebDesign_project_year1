@@ -904,9 +904,7 @@ footer .footer-copyright p {
   display: none;
 }
 
-/*Remove dotted outline from selected option on Firefox*/
-/*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
-/*We use !important to override the color set for the select on line 99*/
+
 .main-contact-form-container select:-moz-focusring {
   color: transparent !important;
   text-shadow: 0 0 0 var(--white);

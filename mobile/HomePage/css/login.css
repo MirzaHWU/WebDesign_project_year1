@@ -7,42 +7,50 @@
     
 }
 
-.login .buttons-container{
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.login .buttons-container button {
+.login button {
+    width: 80vw;
+    height: 7vw;
+
     background-color: #fc854e;
     border-style: none;
-    height: 100%;
-    width: 40%;
-    margin-right: 2%;
-    border-radius: 25px;
+    
+    
+    border-radius: 5vw;
 
-    -webkit-box-shadow: 0px 0px 10px 0px #fc854e;
-    -moz-box-shadow: 0px 0px 10px 0px #fc854e;
-    box-shadow: 0px 0px 10px 0px #fc854e;
+    -webkit-box-shadow: 0px 0px 15px 0px #fc854e;
+    -moz-box-shadow: 0px 0px 15px 0px #fc854e;
+    box-shadow: 0px 0px 15px 0px #fc854e;
 }
 
-.login .buttons-container button a {
+.login button a {
     font-family: 'Open Sans', sans-serif;
-    color: white;
+    color: #e2e9f0;
     text-decoration: none;
 
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: lighter;
+
+    letter-spacing: 2px;
 }
 
 .login h3 {
     font-family: 'Open Sans', sans-serif;
+    color: #515569;
+
+    font-size: 3vw;
+    margin: 0;
+    padding-top: 1%;
+    font-weight: lighter; 
+}
+
+.login h3 a{
+    font-family: 'Open Sans', sans-serif;
     color: #fc854e;
 
     font-size: 3vw;
+    margin: 0;
     padding-top: 1%;
-    font-weight: lighter;
-
-    
+    font-weight: lighter; 
+    text-decoration: none;
 }

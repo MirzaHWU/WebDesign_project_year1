@@ -12,14 +12,19 @@ modeSwitchIcon.addEventListener('click', () => {
 
         //toChangeColor.animate({ 'color': "rgb(252, 133, 78)" }, 600);
 
-        toChangeColor.style.transition = 'color 0.6s';
-        toChangeColor.style.color = 'rgb(252, 133, 78)';
+        toChangeColor.forEach(ele => {
+            ele.style.transition = 'color 0.6s';
+            ele.style.color = 'rgb(252, 133, 78)';
+        })
+        
 
         //whitetext.animate({ 'color': "#E3E3E3" }, 600);
-
-        whitetext.style.transition = 'color 0.6s';
-        whitetext.style.color = '#E3E3E3';
-
+        whitetext.forEach(ele => {
+            ele.style.transition = 'color 0.6s';
+            ele.style.color = '#E3E3E3';
+    
+        }) 
+        
         //formFieldsToChangeColor.animate({ 'backgroundColor': "#121212" }, 600);
 
         formFieldsToChangeColor.style.transition = 'background-color 0.6s';
@@ -71,10 +76,12 @@ modeSwitchIcon.addEventListener('click', () => {
         contactFormBackground.style.backgroundColor = '#191919';
 
         //mainCarsContainer.animate({ 'background-color': "#191919;" }, 600);
-
-        mainCarsContainer.style.transition = 'background-color 0.6s';
-        mainCarsContainer.style.backgroundColor = '#191919';
-
+        mainCarsContainer.forEach(ele => {
+            ele.style.transition = 'background-color 0.6s';
+            ele.style.backgroundColor = '#191919';
+            console.log('#')
+        })
+       
         setTimeout(() => {
             //searchIcon.animate({ 'opacity': "1" }, 1);
 
@@ -105,13 +112,18 @@ modeSwitchIcon.addEventListener('click', () => {
     
        // toChangeColor.animate({ 'color': "#FF6119" }, 600);
 
-       toChangeColor.style.transition = 'color 0.6s';
-       toChangeColor.style.color = '#FF6119';
+       toChangeColor.forEach(ele => {
+        ele.style.transition = 'color 0.6s';
+        ele.style.color = '#FF6119';
+       })
+       
 
         //whitetext.animate({ 'color': "#121212" }, 600);
-
-        whitetext.style.transition = 'color 0.6s';
-        whitetext.style.color = '#121212';
+        whitetext.forEach(ele => {
+            ele.style.transition = 'color 0.6s';
+            ele.style.color = '#121212';
+        })
+        
 
         //formFieldsToChangeColor.animate({ 'backgroundColor': "#E3E3E3" }, 600);
 
@@ -166,8 +178,11 @@ modeSwitchIcon.addEventListener('click', () => {
 
         //mainCarsContainer.animate({ 'background-color': "#EFEFEF;" }, 600);
 
-        mainCarsContainer.style.transition = 'background-color 0.6s';
-        mainCarsContainer.style.backgroundColor = '#EFEFEF';
+        mainCarsContainer.forEach(ele => {
+            ele.style.transition = 'background-color 0.6s';
+            ele.style.backgroundColor = '#EFEFEF';
+        })
+        
 
         setTimeout(() => {
             //searchIcon.animate({ 'opacity': "1" }, 1);

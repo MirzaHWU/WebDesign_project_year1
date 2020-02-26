@@ -7,13 +7,18 @@ const extraText = $(".extra-text");
 const extraTextCircles = $(".extra-text .circle");
 const headerBlurDark = $(".header-blur-dark");
 const headerBlurLight = $(".header-blur-light");
-const toChangeColor = $(".toChangeColor");
+
+const toChangeColor = $all(".toChangeColor");
+
 const learnMoreButton = $(".learn-more-button button"); 
 const aboutContainer = $(".about-container");
-const whitetext = $(".toChangeColorWhite"); 
+
+const whitetext = $all(".toChangeColorWhite"); 
+
 const contactFormBackground = $(".main-contact-form-container"); 
 const formFieldsToChangeColor = $(".formFieldsToChangeColor");
-const mainCarsContainer = $(".main-cars-container .car-category"); 
+
+const mainCarsContainer = $all(".main-cars-container .car-category"); 
 
 
  

@@ -39,10 +39,10 @@ body {
     ;
 
     height: 405vh;
-    width: 100vw;
     margin: 1em;
     
 } 
+
 
 
 
@@ -634,70 +634,70 @@ footer .footer-copyright p {
 
 
 .header a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .header nav {
-    position: relative;
- 
-    padding-right: 4vw;  
+  position: relative;
+
+  padding-right: 4vw;  
 }
 
 .header {
-    position: fixed;
-    z-index: 100;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: #E3E3E3;
-    text-decoration: none;
+  position: fixed;
+  z-index: 100;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #E3E3E3;
+  text-decoration: none;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 
-    grid-area: nav;
-    
+  grid-area: nav;
+  
 }
 
 
 
 .pageName {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 31px;
-    letter-spacing: 10px;
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 31px;
+  letter-spacing: 10px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  
 }
 
 .navLinks {
-    
-    list-style: none;
-    
+  
+  list-style: none;
+  
 
 }
 
 .navLinks li {
-    display: inline-block;
-    padding: 0px 20px;
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 .navLinks li a {
-    transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 
 }
 
 
 .navLinks li a:hover {
-    font-size: 30px;
+  font-size: 30px;
 
-   color:rgb(252, 133, 78);    
+ color:rgb(252, 133, 78);    
 }
 
 
@@ -705,117 +705,117 @@ footer .footer-copyright p {
 
 
 .icon-mode-switch img {
-    filter: invert(100);
+  filter: invert(100);
 }
 
 .searchBox img, .icon-mode-switch img{
-  width: 35px;
-  height: 35px;
-  padding-left: 0px;
+width: 35px;
+height: 35px;
+padding-left: 0px;
 
-  cursor: pointer;
+cursor: pointer;
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
-  
+  width: 7px;
+
 }
- 
+
 ::-webkit-scrollbar-track {
-    background-color: #202020;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+  background-color: #202020;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgb(48, 48, 48);
-    
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(48, 48, 48);
+  
 }
 
 .white-space {
-   
+ 
 
-    grid-area: space;
+  grid-area: space;
 }
 
 .white-space2 {
-    
+  
 
-    grid-area: space2;
+  grid-area: space2;
 }
 
 .white-space3 {
-    
+  
 
-    grid-area: space3;
+  grid-area: space3;
 }
 
 .white-space4 {
-    
+  
 
-    grid-area: space4;
+  grid-area: space4;
 }
 
 .white-space5 {
-    
+  
 
-    grid-area: space5;
+  grid-area: space5;
 }
 
 .white-space6 {
-    
+  
 
-    grid-area: space6;
+  grid-area: space6;
 }
 .white-space7 {
-    
+  
 
-    grid-area: space7;
+  grid-area: space7;
 }
 .white-space8 {
-    
+  
 
-    grid-area: space8;
+  grid-area: space8;
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
-  
+  width: 7px;
+
 }
- 
+
 ::-webkit-scrollbar-track {
-    background-color: #202020;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+  background-color: #202020;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgb(48, 48, 48);
-    
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(48, 48, 48);
+  
 }
 
 .header-blur-dark {
-    top: 0;
-    position: fixed;
-    height: 170px;
-    width: 100%;
+  top: 0;
+  position: fixed;
+  height: 170px;
+  width: 100%;
 
-    background: linear-gradient(0deg, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 45%);
-    z-index: 3;
+  background: linear-gradient(0deg, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 45%);
+  z-index: 3;
 }
 
 .header-blur-light {
-    top: 0;
-    position: fixed;
-    height: 170px;
-    width: 100%;
-    opacity: 0%;
-    background: linear-gradient(0deg, rgba(227,227,227,0) 0%, rgba(227,227,227,1) 45%);
-    z-index: 3;
+  top: 0;
+  position: fixed;
+  height: 170px;
+  width: 100%;
+  opacity: 0%;
+  background: linear-gradient(0deg, rgba(227,227,227,0) 0%, rgba(227,227,227,1) 45%);
+  z-index: 3;
 }
 
 /* ---------------------------------------------------------------------------------------------------------- */
@@ -904,7 +904,9 @@ footer .footer-copyright p {
   display: none;
 }
 
-
+/*Remove dotted outline from selected option on Firefox*/
+/*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
+/*We use !important to override the color set for the select on line 99*/
 .main-contact-form-container select:-moz-focusring {
   color: transparent !important;
   text-shadow: 0 0 0 var(--white);
